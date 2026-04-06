@@ -1,6 +1,6 @@
 # 🤖 SQL Agent com LangChain
 
-Projeto de um agente que permite consultar dados em uma base SQLite utilizando linguagem natural, com suporte de LLM (Llama3 via Ollama) e LangChain.
+Projeto de estudo que implementa um agente capaz de responder perguntas em linguagem natural a partir de uma base de dados SQL.
 
 ---
 
@@ -35,13 +35,6 @@ Projeto de um agente que permite consultar dados em uma base SQLite utilizando l
 6. A query é executada e o resultado é retornado em texto  
 
 ---
-
-## ▶️ Como executar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/Riqueli/sql-agent-langchain.git
-cd sql-agent-langchain
 
 ## 📚 Referências e Estudos
 
