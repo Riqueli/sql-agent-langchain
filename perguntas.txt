@@ -1,0 +1,7 @@
+Qual país teve mais vendas?
+Qual produto teve o maior lucro?
+Qual região vendeu mais?
+Qual país teve maior Total_Revenue?
+Qual país teve maior Total_Profit?
+Qual região teve maior Total_Revenue?
+Qual Item_Type teve maior Total_Profit?

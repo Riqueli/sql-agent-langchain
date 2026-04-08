@@ -47,36 +47,43 @@ agent_executor = create_sql_agent(
     toolkit=toolkit,
     verbose=False,
     agent_type="zero-shot-react-description",
-    max_iterations=6,
+    max_iterations=10,
     handle_parsing_errors=True,
     prefix=prefix
 )
 
 
 # 6. User interaction loop
-print("\n--- SQL Agent ready! Type 'exit' to quit ---")
+print("\n" + "=" * 50)
+print("🤖 SQL Agent ready!")
+print("Ask your question about the database")
+print("Type 'exit' to quit")
+print("=" * 50 + "\n")
 
 while True:
-    question = input("Your question: ").strip()
+    question = input("📝 Your question: ").strip()
 
     if question.lower() == "exit":
-        print("Exiting...")
+        print("\n👋 Exiting the SQL Agent...\n")
         break
 
     if not question:
-        print("Please enter a valid question.")
+        print("⚠️ Please enter a valid question.\n")
         continue
 
     try:
-        print("Thinking...")
+        print("\n⏳ Thinking...\n")
         response = agent_executor.invoke({"input": question})
 
         output = response.get("output", "").strip()
 
         if output:
-            print(f"\nResult: {output}\n")
+            print("✅ Result:")
+            print(output)
+            print()
         else:
-            print("\nCould not generate a response.\n")
+            print("⚠️ Could not generate a response.\n")
 
-    except Exception as e:
-        print(f"Error: {e}")
+    except Exception:
+        print("❌ An error occurred while processing your question.")
+        print("Please try rephrasing it.\n")
